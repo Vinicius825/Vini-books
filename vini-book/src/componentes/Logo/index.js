@@ -1,17 +1,24 @@
-import './Logo.css'
-import logo from '../../imagens/logo.svg'
 
-function Logo() {
+import logo from '../../imagens/logo.svg'
+import styled from 'styled-components'
+
+const Logo = styled.div `
+    display: flex;
+    font-size: 30px;
+`
+const LogoImg = styled.img `
+    margin-right: 10px;
+`
+function LogoHeader() {
     return (
-        <div className='logo'>
-            <img
+        <Logo>
+        <LogoImg
                 src={logo}
                 alt='logo' 
-                className='logo-img'
-            ></img>
+        />
             <p><strong>Vini</strong>Books</p>
-       </div>
+       </Logo>
     )
 }
 
-export default Logo
+export default LogoHeader
